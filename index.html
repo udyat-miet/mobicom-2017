@@ -21,7 +21,7 @@
 		<meta name="description" content="Mobicom is an annual mobile application development contest hosted by MIET, Meerut.">
 		<title>Mobicom</title>
 
-		<!--Favico Files! Generated specific device configuration. Generated using http://realfavicongenerator.net -->
+		<!--Favicon Files! Contains generated specific device configuration. Generated using http://realfavicongenerator.net -->
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -35,30 +35,30 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
-		<link rel="stylesheet" href="assets/all.css">
 		<!--<link rel="stylesheet" href="assets/all.css">-->
+		<link rel="stylesheet" href="assets/all.min.css">
 		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script defer src="assets/all.min.js"></script>
 		<!--<script defer src="assets/all.js"></script>-->
-		<script defer src="assets/all.js"></script>
 	</head>
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header parallax-bg">
-			<header class="mdl-layout__header transparent-bg">
+			<header class="mdl-layout__header animate transparent-bg">
 				<div class="mdl-layout__header-row">
-					<a class="mdl-layout-title" href="">
-						<img src="assets/img/miet-logo.png" title="Meerut Institute of Engineering & Technology" />
-						<img src="assets/img/mobicom-logo-small.png" title="Mobicom 2017" />
-						<div style="clear: both;"></div>
+					<a class="mdl-layout-title miet" href="http://miet.ac.in" title="Meerut Institute of Engineering & Technology">
+						<img src="assets/img/miet-logo.png" alt="MIET" />
+					</a>
+					<a class="mdl-layout-title mobicom" href="" title="Mobicom 2017">
+						<img src="assets/img/mobicom-logo-small.png" alt="Mobicom" />
 					</a>
 					<div class="mdl-layout-spacer"></div>
-					<nav class="mdl-navigatioon mdl-layout--large-screen-only">
+					<nav class="mdl-navigation mdl-layout--large-screen-only">
 						<a class="mdl-navigation__link" href="#why-participate">Why participate</a>
 						<a class="mdl-navigation__link" href="#code-of-conduct">Code of Conduct</a>
 						<a class="mdl-navigation__link" href="#apply">Apply</a>
 						<a class="mdl-navigation__link" href="#team">Team</a>
 						<a class="mdl-navigation__link" href="#contact">Get in touch</a>
-						<div style="clear: both;"></div>
 					</nav>
 				</div>
 			</header>
@@ -92,6 +92,16 @@
 									title="Find out more!">
 								<i class="material-icons">keyboard_arrow_down</i>
 							</a>
+						</div>
+						<div id="countdown-timer" class="primary-colored secondary-bg mdl-shadow--2dp">
+							<span id="days">10</span>
+							<span class="unit-placeholder">days</span>
+							<span id="hours">7</span>
+							<span class="unit-placeholder">hours</span>
+							<span id="minutes">40</span>
+							<span class="unit-placeholder">minutes</span>
+							<span id="seconds">43</span>
+							<span class="unit-placeholder">seconds</span>
 						</div>
 					</div>
 					<div id="why-participate" class="slide-section secondary-bg">
@@ -344,26 +354,26 @@
 							<h4>Frequently asked questions</h4>
 							<div class="faq-container">
 								<span class="question primary-colored">Is there a fee charged for participating in Mobicom 2017?</span>
-								<span class="answer">No! The contest is free &amp; open to all.</span>
+								<span class="answer is-visible">No! The contest is free &amp; open to all.</span>
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">Who can participate in Mobicom 2017?</span>
-								<span class="answer">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2017.</span>
+								<span class="answer is-visible">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2017.</span>
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">Where can I apply?</span>
-								<span class="answer">Fill out 
+								<span class="answer is-visible">Fill out 
 									<a href="https://goo.gl/forms/8LpdP0AgguOS8NSF2" class="accented-anchor" target="_blank">this Google Form</a> to apply
 										&amp; participate!</span>
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">How many ideas can a single team submit?</span>
-								<span class="answer">Any team can submit upto maximum of 3 ideas and each participating team is required to submit atleast
+								<span class="answer is-visible">Any team can submit upto maximum of 3 ideas and each participating team is required to submit atleast
 									1 idea.</span>
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">What information should we include at time of submitting the idea?</span>
-								<span class="answer">Submitted idea should be an original work of team and/or its members.
+								<span class="answer is-visible">Submitted idea should be an original work of team and/or its members.
 									<ul>
 										<li>You must mention the problem domain solved by your idea.</li>
 										<li>Include goals and functions that your mobile app will perform.</li>
@@ -374,13 +384,13 @@
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">Which mobile platforms should we use in the development process?</span>
-								<span class="answer">You are free to use any platform of your choice in the development process. Mobicom has no
+								<span class="answer is-visible">You are free to use any platform of your choice in the development process. Mobicom has no
 								restrictions on platforms, however, you are required to make mobile apps. Presenting any other kind of software 
 								program will lead to disqualification of team.</span>
 							</div>
 							<div class="faq-container">
 								<span class="question primary-colored">What is the judging process in Mobicom 2017?</span>
-								<span class="answer">In Mobicom 2017, your idea will be judged on the basis of practicality &amp; originality, and
+								<span class="answer is-visible">In Mobicom 2017, your idea will be judged on the basis of practicality &amp; originality, and
 									your mobile app will be judged on the basis of its usability and quality.</span>
 							</div>
 						</div>

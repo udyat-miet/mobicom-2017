@@ -15,14 +15,21 @@
 */
 
 $(function() {
-	var header_div = $('header');
-	var content_div = $('.mdl-layout__content');
-	var about_div = $('#about');
-	var menu_items = $('.mdl-navigation:visible a[href^="#"]');
+	var header_div = $('header'),
+		content_div = $('.mdl-layout__content'),
+		about_div = $('#about'),
+		menu_items = $('nav:visible a[href^="#"]'),
+		countdown_div = $('#countdown-timer'),
+		countdownEndTime = $(window).width() > 1024 ? new Date("Nov 10, 2017 10:00:00").getTime() : -1,
+		days_span = countdown_div.find('#days'),
+		hours_span = countdown_div.find('#hours'),
+		mins_span = countdown_div.find('#minutes'),
+		secs_span = countdown_div.find('#seconds');
 
+	menu_items.addClass("animate"); // make menu items animatable
 	$('a[href^="#"]').click(function(e) {
 		e.preventDefault();
-		var top = $(this.hash).get(0).offsetTop; // $(#).offset().top returns incorrect value. No idea why!!
+		var top = $(this.hash).get(0).offsetTop; // $(#).offset().top not working. NO IDEA WHY?!!
 		content_div.animate({
 			scrollTop: top + 5
 		}, 800, "swing");
@@ -30,13 +37,50 @@ $(function() {
 			$('.mdl-layout__drawer-button').click();
 	});
 
-	var scrollSpy = function() {
-		if(content_div.scrollTop() < about_div.height() - 100 && header_div.hasClass("transparent-bg") === false) {
+	// show countdown timer
+	if(countdownEndTime > new Date().getTime())
+		countdown_div.fadeIn(800);
+
+	// hide or show based on window width on resize
+	$(window).resize(function() {
+		if($(this).width() > 1024) {
+			if(countdown_div.is(':visible') === false)
+				countdown_div.fadeIn(800);
+		} else if (countdown_div.is(':visible') === true){
+			countdown_div.fadeOut(400);
+		}
+	});
+
+	var countdownTimer = setInterval(function() {
+		var timeLeft = countdownEndTime - new Date().getTime();
+
+		if(timeLeft < 0 && countdown_div.is(':visible') === true) {
+			clearInterval(countdownTimer);
+			countdown_div.fadeOut(400);
+			return;
+		}
+
+		var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+		days_span.html(days);
+		hours_span.html(hours);
+		mins_span.html(minutes);
+		secs_span.html(seconds);
+	}, 1000);
+
+	// schedule a spy on scroll events. Faster than adding scroll handlers.
+	setInterval(function() {
+		if(content_div.scrollTop() < about_div.height() && header_div.hasClass("transparent-bg") === false) {
 			header_div.removeClass("primary-bg");
 			header_div.addClass("transparent-bg");
-		} else if(content_div.scrollTop() > about_div.height() - 100 && header_div.hasClass("primary-bg") === false) {
+			countdown_div.fadeIn(800);
+		} else if(content_div.scrollTop() > about_div.height() && header_div.hasClass("primary-bg") === false) {
 			header_div.removeClass("transparent-bg");
 			header_div.addClass("primary-bg");
+			countdown_div.fadeOut(800);
 		}
 
 		$(menu_items).each(function () {
@@ -48,17 +92,15 @@ $(function() {
 			else if ($this.hasClass("active"))
 				$this.removeClass("active");
 		});
+	}, 500);
 
-		setTimeout(scrollSpy, 500);
-	};
-
-	scrollSpy();
-
+	// Handle faq container clicks!
+	$('.answer.is-visible').toggleClass("is-visible");
 	$('.faq-container').click(function(e) {
 		e.preventDefault();
 		if($(this).find('.answer').hasClass("is-visible") === false)
 			$('.faq-container > .answer').removeClass("is-visible");
 		$(this).find('.answer').toggleClass("is-visible");
-	})
+	});
 });
 
