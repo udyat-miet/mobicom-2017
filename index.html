@@ -1,0 +1,409 @@
+<!--
+	Copyright 2017 Ashutosh Gangwar
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Mobicom is an annual mobile application development contest hosted by MIET, Meerut.">
+		<title>Mobicom</title>
+
+		<!--Favico Files! Generated specific device configuration. Generated using http://realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicon/manifest.json">
+		<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<!--theme and custom stylesheets & javascripts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
+		<link rel="stylesheet" href="assets/all.css">
+		<!--<link rel="stylesheet" href="assets/all.css">-->
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<!--<script defer src="assets/all.js"></script>-->
+		<script defer src="assets/all.js"></script>
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header parallax-bg">
+			<header class="mdl-layout__header transparent-bg">
+				<div class="mdl-layout__header-row">
+					<a class="mdl-layout-title" href="">
+						<img src="assets/img/miet-logo.png" title="Meerut Institute of Engineering & Technology" />
+						<img src="assets/img/mobicom-logo-small.png" title="Mobicom 2017" />
+						<div style="clear: both;"></div>
+					</a>
+					<div class="mdl-layout-spacer"></div>
+					<nav class="mdl-navigatioon mdl-layout--large-screen-only">
+						<a class="mdl-navigation__link" href="#why-participate">Why participate</a>
+						<a class="mdl-navigation__link" href="#code-of-conduct">Code of Conduct</a>
+						<a class="mdl-navigation__link" href="#apply">Apply</a>
+						<a class="mdl-navigation__link" href="#team">Team</a>
+						<a class="mdl-navigation__link" href="#contact">Get in touch</a>
+						<div style="clear: both;"></div>
+					</nav>
+				</div>
+			</header>
+			<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#why-participate">Why participate</a>
+					<a class="mdl-navigation__link" href="#code-of-conduct">Code of Conduct</a>
+					<a class="mdl-navigation__link" href="#apply">Apply</a>
+					<a class="mdl-navigation__link" href="#team">Team</a>
+					<a class="mdl-navigation__link" href="#contact">Get in touch</a>
+					<a class="mdl-navigation__link" href="#faqs">FAQs</a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+				<div class="page-content">
+					<div id="about" class="slide-section">
+						<div class="content-wrapper">
+							<img src="assets/img/mobicom-logo.png" alt="Mobicom Logo" title="Mobicom 2017" />
+							<h6 class="accent-colored"><i class="material-icons">date_range</i> <span>November 10, 2017</span></h6>
+							<h6 class="accent-colored"><i class="material-icons">pin_drop</i>
+								<span><a class="accent-colored" title="View on Google Maps" target="_blank"
+									href="https://www.google.co.in/maps/place/MIET+Azim+Premji+Block+(M-Block)/@28.9745341,77.6389958,15z">
+									M-311, Ajim Premji [M] Block, MIET Meerut 
+									<sup><i class="material-icons">exit_to_app</i></sup></a></span>
+							</h6>
+							<h5 class="secondary-colored">Hosted by <a href="http://miet.ac.in" class="accented-anchor">
+								MIET</a>, Mobicom is a competitive platform 
+								to present ideas, develop mobile apps and win exciting cash prizes.
+							</h5>
+							<a href="#why-participate" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect"
+									title="Find out more!">
+								<i class="material-icons">keyboard_arrow_down</i>
+							</a>
+						</div>
+					</div>
+					<div id="why-participate" class="slide-section secondary-bg">
+						<h4 class="secondary-colored-dark">Why should you participate?</h4>
+						<div class="mdl-grid accent-colored">
+							<div class="mdl-cell mdl-cell--4-col">
+								<i class="material-icons">view_carousel</i><br />
+    							<span>Freely present your mobile app idea</span>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<i class="material-icons">gavel</i><br />
+								<span>Design, develop and test your mobile app</span>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<i class="material-icons">present_to_all</i><br />
+								<span>Present, and Deploy &amp; scale with cash prizes</span>
+							</div>
+						</div>
+					</div>
+					<div id="code-of-conduct" class="slide-section primary-bg">
+						<h4>Code of Conduct</h4>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--6-col">
+								<h5>Rules</h5>
+								<ol type="a">
+									<li>Maximum of 2 members are allowed in a team</li>
+									<li>Participants are required to submit their app idea in Round 1</li>
+									<li>Selected teams will develop their mobile app for Round 2</li>
+									<li>In Round 2, selected teams will present their app before judges</li>
+									<li>Winner will be selected on the basis of originality &amp; practicality of idea and usability of presented mobile app</li>
+									<li>No student is allowed to be part of more than 1 team</li>
+									<li>All teams
+										<ol type="i">
+											<li>will be allotted 15 minutes to present their app</li>
+											<li>are allowed to use any platform to develop their apps</li>
+											<li>are allowed to submit updates of idea (if any) until deadline</li>
+											<li>are allowed to bring their own mobile devices to showcase their apps</li>
+										</ol>
+									</li>
+								</ol>
+							</div>
+							<div class="mdl-cell mdl-cell--6-col">
+								<h5>Content Restrictions</h5>
+								The submitted ideas and/or mobile apps must not contain
+								<ol type="a">
+									<li>Nudity, lewd or vulgar behavior.</li>
+									<li>Material that violates or infringes another’s rights, including but not limited to privacy.</li>
+									<li>Publicity or intellectual property rights, including but not limited to copyright patent.</li>
+									<li>Trademark, trade secret infringement or other proprietary right of any party.</li>
+									<li>Brand names or trademarks.</li>
+									<li>Material that is hateful, tortuous, defamatory, slanderous or libelous.</li>
+									<li>Gambling application or sites.</li>
+									<li>Material that includes content that is deemed inappropriate, indecent, obscene or otherwise does not comply with the Content Restrictions, as determined by Contest Administrator in its sole disc.</li>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div id="apply" class="slide-section secondary-bg">
+						<h4 class="primary-colored">Apply</h4>
+						<h5 class="secondary-colored-dark">Fill out this  
+						<a href="https://goo.gl/forms/8LpdP0AgguOS8NSF2" class="accented-anchor" target="_blank">form</a> to apply
+						and participate!</h5>
+					</div>
+					<div id="team" class="slide-section accent-bg">
+						<h4>Behind the scene</h4>
+						<h5 class="secondary-colored">Mentors</h5>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/prof_mk.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Prof. Mukesh Rawat</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										Head of Derpartment<br />Department of Computer Science &amp; Engineering
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/dr_aj.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Dr. Ajay Singh</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										Professor<br />
+										Department of Business and Management Studies
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="secondary-colored">Technical</h5>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/rahul.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Rahul Verma</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (4th year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="https://www.linkedin.com/in/rahul-verma-864b89126/" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/shivam.png') center / cover;">
+										<h2 class="mdl-card__title-text">Shivam Agarwal</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (4th year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="https://www.linkedin.com/in/shivam-agarwal-94587082" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="secondary-colored">Commitee</h5>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Samriddhi Singh</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (4th year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="#" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/nishant.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Nishant Sharma</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (2nd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="https://www.linkedin.com/in/nishant-sharna-58a349149" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/prachi.png') center / cover;">
+										<h2 class="mdl-card__title-text">Prachi Sharma</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (2nd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="https://www.linkedin.com/profile/view?id=AAIAACS-I7kBG12JmM1USe_PD_mMeYJmno8Orqk" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Ravi Soni</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (2nd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="#" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Riya Deshwal</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (2nd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="#" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Tushit Agarwal</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (2nd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="#" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="secondary-colored">Development</h5>
+						<div class="md-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="team-member-card mdl-card mdl-shadow--2dp">
+									<div class="mdl-card__title mdl-card--expand" style="background: url('assets/img/ashutosh.jpg') center / cover;">
+										<h2 class="mdl-card__title-text">Ashutosh Gangwar</h2>
+									</div>
+									<div class="mdl-card__supporting-text">
+										B.Tech. Computer Science &amp; Engineering (3rd year)
+									</div>
+									<div class="mdl-card__actions mdl-card--border">
+										<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+											href="https://www.linkedin.com/in/ashutoshgngwr/" target="_blank">LinkedIn</a>
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+					<div id="contact" class="slide-section secondary-bg mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col">
+							<h4>Have a question?</h4>
+							<form method="POST" action="http://formspree.io/ashutosh.gangwar.cs.2015@miet.ac.in">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label">
+									<!-- Pattern matches email! [mode than one char]@[mode than one char].[between 1 - 9 char]
+										Using respective matching groups.	-->
+  									<input class="mdl-textfield__input" type="text" pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$"
+  										id="email" name="email" required />
+  									<label class="mdl-textfield__label" for="email">Email</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label">
+  									<textarea class="mdl-textfield__input" id="query" name="query"
+  										rows="3" required></textarea>
+  									<label class="mdl-textfield__label" for="query">Query</label>
+								</div>
+								<div class="mdl-button--submit">
+									<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect"
+									type="submit" title="Ask Team Mobicom"><i class="material-icons">navigate_next</i></button>
+								</div>
+							</form>
+						</div>
+						<div id="faqs" class="mdl-cell mdl-cell--6-col">
+							<h4>Frequently asked questions</h4>
+							<div class="faq-container">
+								<span class="question primary-colored">Is there a fee charged for participating in Mobicom 2017?</span>
+								<span class="answer">No! The contest is free &amp; open to all.</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">Who can participate in Mobicom 2017?</span>
+								<span class="answer">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2017.</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">Where can I apply?</span>
+								<span class="answer">Fill out 
+									<a href="https://goo.gl/forms/8LpdP0AgguOS8NSF2" class="accented-anchor" target="_blank">this Google Form</a> to apply
+										&amp; participate!</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">How many ideas can a single team submit?</span>
+								<span class="answer">Any team can submit upto maximum of 3 ideas and each participating team is required to submit atleast
+									1 idea.</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">What information should we include at time of submitting the idea?</span>
+								<span class="answer">Submitted idea should be an original work of team and/or its members.
+									<ul>
+										<li>You must mention the problem domain solved by your idea.</li>
+										<li>Include goals and functions that your mobile app will perform.</li>
+										<li>Mention your target audience; who will be using your mobile app once its deployed for the masses.</li>
+										<li>Make sure if the idea you are submitting can be transformed into a robust mobile app in the given timeframe.</li>
+									</ul>
+								</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">Which mobile platforms should we use in the development process?</span>
+								<span class="answer">You are free to use any platform of your choice in the development process. Mobicom has no
+								restrictions on platforms, however, you are required to make mobile apps. Presenting any other kind of software 
+								program will lead to disqualification of team.</span>
+							</div>
+							<div class="faq-container">
+								<span class="question primary-colored">What is the judging process in Mobicom 2017?</span>
+								<span class="answer">In Mobicom 2017, your idea will be judged on the basis of practicality &amp; originality, and
+									your mobile app will be judged on the basis of its usability and quality.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="mdl-mini-footer">
+					<div class="mdl-mini-footer__left-section">
+						&copy; Meerut Institute of Engineering &amp; Technology, Meerut<br />
+						Designed with <i class="material-icons">favorite</i> by 
+						<a href="https://ashutoshgngwr.github.io" class="accented-anchor" target="_blank">Ashutosh Gangwar</a><br />
+						Source code licensed under 
+						<a href="http://www.apache.org/licenses/LICENSE-2.0.txt" class="accented-anchor" target="_blank">
+						Apache License Version 2.0</a>
+					</div>
+					<div class="mdl-mini-footer__right-section">
+						View or fork <a href="https://github.com/ashutoshgngwr/mobicom-2017" class="accented-anchor" target="_blank">source code</a> on Github<br />
+						Based on <a href="https://getmdl.io" class="accented-anchor" target="_blank">Material Design Lite</a>
+						framework by Google<br />
+						Icons from <a href="https://google.github.io/material-design-icons/" class="accented-anchor" target="_blank">
+						Material Icons Web Font</a> by Google
+					</div>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

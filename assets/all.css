@@ -1,0 +1,358 @@
+/*
+	Copyright 2017 Ashutosh Gangwar
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+*/
+body {
+	font-family: "Roboto";
+}
+
+ol, ul {
+	padding-left: 25px;
+}
+
+.primary-colored {
+	color: rgb(103,58,183);
+}
+
+.accent-colored {
+	color: rgb(149,117,205);
+}
+
+.secondary-colored {
+	color: #EFEFEF;
+}
+
+.secondary-colored-dark {
+	color: #333;
+}
+
+.primary-bg {
+	background: rgb(103,58,183);
+	color: #EFEFEF;
+}
+
+.accent-bg {
+	background: rgb(149,117,205);
+	color: #EFEFEF;
+}
+
+.secondary-bg {
+	background: #EFEFEF;
+}
+
+.parallax-bg {
+	background: url('img/background.jpeg') no-repeat fixed center;
+	background-size: cover;
+}
+
+a.accented-anchor, a.accented-anchor:visited {
+	color: rgb(255,64,129); /*Let it be pink! :p */
+	text-decoration: none;
+}
+
+a.accented-anchor:hover, a.accented-anchor:active {
+	text-decoration: underline;
+}
+
+form .mdl-textfield, form div.mdl-button--submit {
+	display: block;
+	max-width: 400px;
+	margin: auto;
+}
+
+form div.mdl-button--submit {
+	text-align: right;
+}
+
+header.mdl-layout__header {
+	-o-transition: all 800ms ease-in-out;
+	-moz-transition: all 800ms ease-in-out;
+	-webkit-transition: all 800ms ease-in-out;
+	transition: all 800ms ease-in-out;
+}
+
+header.transparent-bg {
+	background: transparent;
+}
+
+a.mdl-layout-title > img {
+	display: block;
+	float: left;
+	height: 45px;
+	margin-left: 15px;
+	-webkit-filter: drop-shadow(0px 0px 6px #AAA);
+	filter: drop-shadow(0px 0px 6px #AAA);
+}
+
+a.mdl-layout-title > img:first-child {
+	margin-left: 0;
+	height: 50px;
+	-webkit-filter: drop-shadow(0px 0px 6px #EEE);
+	filter: drop-shadow(0px 0px 6px #EEE);
+}
+
+.mdl-navigation__link {
+	text-transform: uppercase;
+	font-family: "Roboto";
+	-o-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.mdl-navigation__link.active {
+	color: rgb(255,64,129); /*Let it be pink! :p */
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+	float: left;
+}
+
+.slide-section {
+	width: 90%;
+	padding: 50px 5%;
+	text-align: center;
+}
+
+.slide-section h4 {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.slide-section h5 {
+	font-weight: 400;
+	line-height: 125%;
+}
+
+#about {
+	background: none;
+	width: 80%;
+	padding: 0 10%;
+	height: 100vh;
+	margin: -56px 0 0 -15px;
+}
+
+#about > .content-wrapper {
+	position: relative;
+	max-width: 550px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	padding: 0 10%;
+	margin: 0 auto;
+}
+
+#about img {
+	max-width: 350px;
+	width: 80%;
+	display: block;
+	margin: 0 auto 20px;
+	-webkit-filter: drop-shadow(0px 0px 6px #666);
+	filter: drop-shadow(0px 0px 6px #666);
+}
+
+#about h5, #about h6 {
+	margin: 5px auto;
+	-webkit-filter: drop-shadow(0px 0px 4px #000);
+	filter: drop-shadow(0px 0px 4px #000);
+}
+
+#about h6, #about h6 a {
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 14px;
+	font: monospace;
+}
+
+#about h6 a:hover {
+	text-decoration: underline;
+}
+
+#about h6 span:before {
+	content: "{ ";
+}
+
+#about h6 span:after {
+	content: " }";
+}
+
+#about h6 i.material-icons {
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+#about .content-wrapper > a {
+	margin: 15px 0;
+}
+
+.page-content {
+	margin: 0 5%;
+}
+
+#why-participate {
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+#why-participate .mdl-cell {
+	padding: 40px 20px;
+	-o-transition: color 500ms ease-in-out;
+	-moz-transition: color 500ms ease-in-out;
+	-webkit-transition: color 500ms ease-in-out;
+	transition: color 500ms ease-in-out;
+	cursor: default;
+}
+
+#why-participate .mdl-cell:hover {
+	color: rgb(103,58,183);
+}
+
+#why-participate .mdl-cell span {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+#why-participate .mdl-cell i {
+	font-size: 50px;
+	line-height: 70px;
+}
+
+#code-of-conduct .mdl-cell {
+	text-align: left;
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+#team .mdl-cell {
+	margin: 10px auto;
+	text-align: left;
+}
+
+.team-member-card {
+	margin: auto;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.team-member-card > .mdl-card__title {
+  height: 140px;
+  padding: 0;
+}
+
+.team-member-card h2.mdl-card__title-text {
+	width: 100%;
+	padding: 10px 16px;
+	background: rgba(255,255,255,0.6); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
+    background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
+    background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
+    background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
+    font-weight: 300;
+    color: #222;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.faq-container {
+	text-align: left;
+	margin: auto;
+	padding: 10px 20px;
+	cursor: default;
+}
+
+.faq-container > .question, .faq-container > .answer {
+	display: block;
+}
+
+.faq-container > .question {
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.faq-container > .question:before {
+	content: "Q. ";
+}
+
+.faq-container > .answer {
+	display: none;
+	visibility: none;
+	text-indent: 20px;
+}
+
+.faq-container > .answer > ul {
+	margin: 0;
+	text-indent: 0;
+}
+
+.answer.is-visible {
+	display: block;
+}
+
+footer.mdl-mini-footer {
+	padding: 16px;
+}
+
+footer .material-icons {
+	vertical-align: middle;
+	font-size: inherit;
+	font-size: 125%;
+}
+
+.mdl-mini-footer__right-section {
+	text-align: right;
+}
+
+@media only screen and (max-height: 600px), only screen and (max-width: 768px) {
+
+	#about {
+		margin-top: 56px; /*Equal to mdl-header's height*/
+		padding:80px 0; /* Add 40 to because of content-blur-mask*/
+		height: auto;
+		margin: 0 auto;
+	}
+
+	#about > .content-wrapper {
+		top: 0;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		padding: 0 10%;
+	}
+
+	#about img {
+		width: 100%;
+	}
+
+	.slide-section {
+		width: 80%;
+		padding: 50px 10%;
+		text-align: center;
+	}
+
+	#about h6 {
+		font-size: 13px;
+	}
+
+	.mdl-mini-footer__right-section {
+		text-align: left;
+	}
+}
