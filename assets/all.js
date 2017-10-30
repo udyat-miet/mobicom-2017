@@ -76,11 +76,13 @@ $(function() {
 		if(content_div.scrollTop() < about_div.height() && header_div.hasClass("transparent-bg") === false) {
 			header_div.removeClass("primary-bg");
 			header_div.addClass("transparent-bg");
-			countdown_div.fadeIn(800);
+			if($(window).width() > 1024) // check if desktop
+				countdown_div.fadeIn(800); // display countdown
 		} else if(content_div.scrollTop() > about_div.height() && header_div.hasClass("primary-bg") === false) {
 			header_div.removeClass("transparent-bg");
 			header_div.addClass("primary-bg");
-			countdown_div.fadeOut(800);
+			if(countdown_div.is(':visible') === true)
+				countdown_div.fadeOut(800);
 		}
 
 		$(menu_items).each(function () {
