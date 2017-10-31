@@ -73,12 +73,12 @@ $(function() {
 
 	// schedule a spy on scroll events. Faster than adding scroll handlers.
 	setInterval(function() {
-		if(content_div.scrollTop() < about_div.height() && header_div.hasClass("transparent-bg") === false) {
+		if(content_div.scrollTop() < about_div.height() - 100 && header_div.hasClass("transparent-bg") === false) {
 			header_div.removeClass("primary-bg");
 			header_div.addClass("transparent-bg");
 			if($(window).width() > 1024) // check if desktop
 				countdown_div.fadeIn(800); // display countdown
-		} else if(content_div.scrollTop() > about_div.height() && header_div.hasClass("primary-bg") === false) {
+		} else if(content_div.scrollTop() > about_div.height() - 100 && header_div.hasClass("primary-bg") === false) {
 			header_div.removeClass("transparent-bg");
 			header_div.addClass("primary-bg");
 			if(countdown_div.is(':visible') === true)

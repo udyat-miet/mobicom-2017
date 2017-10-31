@@ -91,11 +91,6 @@ header.transparent-bg {
 	filter: drop-shadow(0 0 6px #EFEFEF);
 }
 
-.mdl-layout-title.miet > img {
-	height: 58px;
-	width: auto;
-}
-
 .mdl-layout-title.mobicom {
 	margin-left: 20px;
 	-webkit-filter: drop-shadow(0 0 6px #999);
@@ -258,36 +253,43 @@ header.transparent-bg {
 	margin: 0 auto;
 }
 
-#team .mdl-cell {
-	margin: 10px auto;
+#team .mdl-cell.team-member-card {
+	margin: 20px 0;
 	text-align: left;
-}
-
-.team-member-card {
-	margin: auto;
 	max-width: 100%;
 	word-wrap: break-word;
 }
 
-.team-member-card > .mdl-card__title {
-  height: 140px;
-  padding: 0;
+#team .mdl-cell.team-member-card.mentor {
+	margin: 20px auto;
 }
 
-.team-member-card h2.mdl-card__title-text {
-	width: 100%;
-	padding: 10px 16px;
-	background: rgba(255,255,255,0.6); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
-    background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
-    background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
-    background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95));
-    font-weight: 300;
-    color: #222;
+.team-member-card td.dp {
+	width: 85px;
 }
 
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
+.team-member-card td.dp > img {
+	width: 75px;
+	height: 75px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.team-member-card td.name {
+	font-size: 20px;
+}
+
+.team-member-card td.title {
+	font-size: 14px;
+}
+
+.team-member-card td.linkedin > a {
+	text-decoration: none;
+}
+
+.team-member-card td.linkedin > a:hover {
+	text-decoration: underline;
 }
 
 .faq-container {
