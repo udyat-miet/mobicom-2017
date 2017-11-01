@@ -20,7 +20,7 @@ $(function() {
 		about_div = $('#about'),
 		menu_items = $('nav:visible a[href^="#"]'),
 		countdown_div = $('#countdown-timer'),
-		countdownEndTime = $(window).width() > 1024 ? new Date("Nov 10, 2017 10:00:00").getTime() : -1,
+		countdownEndTime = getCountdownEndTime(),
 		days_span = countdown_div.find('#days'),
 		hours_span = countdown_div.find('#hours'),
 		mins_span = countdown_div.find('#minutes'),
@@ -44,6 +44,7 @@ $(function() {
 	// hide or show based on window width on resize
 	$(window).resize(function() {
 		if($(this).width() > 1024) {
+			countdownEndTime = getCountdownEndTime();
 			if(countdown_div.is(':visible') === false)
 				countdown_div.fadeIn(800);
 		} else if (countdown_div.is(':visible') === true){
@@ -74,13 +75,11 @@ $(function() {
 	// schedule a spy on scroll events. Faster than adding scroll handlers.
 	setInterval(function() {
 		if(content_div.scrollTop() < about_div.height() - 100 && header_div.hasClass("transparent-bg") === false) {
-			header_div.removeClass("primary-bg");
-			header_div.addClass("transparent-bg");
+			header_div.addClass("transparent-bg").removeClass("primary-bg");
 			if($(window).width() > 1024) // check if desktop
 				countdown_div.fadeIn(800); // display countdown
 		} else if(content_div.scrollTop() > about_div.height() - 100 && header_div.hasClass("primary-bg") === false) {
-			header_div.removeClass("transparent-bg");
-			header_div.addClass("primary-bg");
+			header_div.addClass("primary-bg").removeClass("transparent-bg");
 			if(countdown_div.is(':visible') === true)
 				countdown_div.fadeOut(800);
 		}
@@ -106,3 +105,8 @@ $(function() {
 	});
 });
 
+function getCountdownEndTime() {
+	if($(window).width() > 1024)
+		return new Date("Nov 10, 2017 10:00:00").getTime();
+	return -1;
+}

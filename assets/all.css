@@ -14,7 +14,7 @@
 	limitations under the License.
 */
 body {
-	font-family: "Roboto";
+	font-family: Helvetica, "Roboto";
 }
 
 ol, ul {
@@ -83,7 +83,11 @@ form div.mdl-button--submit {
 }
 
 header.transparent-bg {
-	background: transparent;
+	background: rgba(239,239,239,0.4);
+	background: -webkit-linear-gradient(rgba(239,239,239,0.38),rgba(239,239,239,0.45),rgba(239,239,239,0.38));
+	background: -o-linear-gradient(rgba(239,239,239,0.38),rgba(239,239,239,0.45),rgba(239,239,239,0.38));
+	background: -moz-linear-gradient(rgba(239,239,239,0.38),rgba(239,239,239,0.45),rgba(239,239,239,0.38));
+	background: linear-gradient(rgba(239,239,239,0.38),rgba(239,239,239,0.45),rgba(239,239,239,0.38));
 }
 
 .mdl-layout-title.miet {
@@ -118,8 +122,10 @@ header.transparent-bg {
 }
 
 .slide-section h5 {
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 125%;
+	max-width: 540px;
+	margin: 10px auto;
 }
 
 #about {
@@ -161,7 +167,7 @@ header.transparent-bg {
 #about h6, #about h6 a {
 	text-decoration: none;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 13px;
 	font: monospace;
 }
 
@@ -222,6 +228,7 @@ header.transparent-bg {
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
 	border-radius: 5px 5px 0 0;
+	padding-bottom: 0px;
 }
 
 #why-participate .mdl-cell {
@@ -237,14 +244,31 @@ header.transparent-bg {
 	color: rgb(103,58,183);
 }
 
-#why-participate .mdl-cell span {
+#why-participate .mdl-cell > span {
 	font-size: 20px;
 	line-height: 30px;
 }
 
 #why-participate .mdl-cell i {
+	vertical-align: middle;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+#why-participate .mdl-cell > i {
 	font-size: 50px;
-	line-height: 70px;
+	line-height: 60px;
+}
+
+#why-participate .mdl-cell > div {
+	line-height: 20px;
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+#timeline {
+	padding-top: 20px;
 }
 
 #code-of-conduct .mdl-cell {
@@ -314,7 +338,6 @@ header.transparent-bg {
 
 .faq-container > .answer {
 	display: none;
-	visibility: none;
 	text-indent: 20px;
 }
 
@@ -372,6 +395,7 @@ footer .material-icons {
 
 	#about h6 {
 		font-size: 13px;
+		line-height: 15px;
 	}
 
 	.mdl-mini-footer__right-section {
