@@ -121,7 +121,7 @@ header.transparent-bg {
 	font-weight: 300;
 }
 
-.slide-section h5 {
+.slide-section h5, .slide-section h6 {
 	font-weight: 300;
 	line-height: 125%;
 	max-width: 540px;
