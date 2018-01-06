@@ -14,17 +14,60 @@
 	limitations under the License.
 */
 
+var countdown = {
+	init:					function() {
+									this.div = $("#countdown-timer");
+									this.days = this.div.find("#days");
+									this.hours = this.div.find("#hours");
+									this.minutes = this.div.find("#minutes");
+									this.seconds = this.div.find("#seconds");
+								},
+	getEnd:				function() {
+									return new Date("Nov 10, 2017 10:00:00").getTime();
+								},
+	getRemaining: function() {
+									return this.getEnd() - new Date().getTime();
+								},
+	show:					function() {
+									if(this.div.is(":visible") === true || this.getRemaining() < 0 || $(window).width() < 1024)
+										return;
+
+									this.timer = setInterval(this.update, 1000);
+									this.div.fadeIn(800);
+									this.update();
+								},
+	update:				function() {
+									var remaining = countdown.getRemaining();
+									if(remaining < 0) { // hide countdown timer
+										countdown.hide();
+										return;
+									}
+									countdown.days.html(Math.floor(remaining / (1000 * 60 * 60 * 24)));
+									countdown.hours.html(Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+									countdown.minutes.html(Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60)));
+									countdown.seconds.html(Math.floor((remaining % (1000 * 60)) / 1000));
+								},
+	hide:					function() {
+									clearInterval(this.timer);
+									this.div.fadeOut(400);
+								}
+};
+
 $(function() {
 	var header_div = $('header'),
 		content_div = $('.mdl-layout__content'),
 		about_div = $('#about'),
-		menu_items = $('nav:visible a[href^="#"]'),
-		countdown_div = $('#countdown-timer'),
-		countdownEndTime = getCountdownEndTime(),
-		days_span = countdown_div.find('#days'),
-		hours_span = countdown_div.find('#hours'),
-		mins_span = countdown_div.find('#minutes'),
-		secs_span = countdown_div.find('#seconds');
+		menu_items = $('nav:visible a[href^="#"]');
+
+	// init countdown timer
+	countdown.init();
+	countdown.show(); // show timer
+	$(window).resize(function() {
+		if($(window).width() < 1024) // hide countdown timer.
+			countdown.hide();
+		else
+			countdown.show();
+	});
 
 	menu_items.addClass("animate"); // make menu items animatable
 	$('a[href^="#"]').click(function(e) {
@@ -37,51 +80,14 @@ $(function() {
 			$('.mdl-layout__drawer-button').click();
 	});
 
-	// show countdown timer
-	if(countdownEndTime > new Date().getTime())
-		countdown_div.fadeIn(800);
-
-	// hide or show based on window width on resize
-	$(window).resize(function() {
-		if($(this).width() > 1024) {
-			countdownEndTime = getCountdownEndTime();
-			if(countdown_div.is(':visible') === false)
-				countdown_div.fadeIn(800);
-		} else if (countdown_div.is(':visible') === true){
-			countdown_div.fadeOut(400);
-		}
-	});
-
-	var countdownTimer = setInterval(function() {
-		var timeLeft = countdownEndTime - new Date().getTime();
-
-		if(timeLeft < 0 && countdown_div.is(':visible') === true) {
-			clearInterval(countdownTimer);
-			countdown_div.fadeOut(400);
-			return;
-		}
-
-		var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-		days_span.html(days);
-		hours_span.html(hours);
-		mins_span.html(minutes);
-		secs_span.html(seconds);
-	}, 1000);
-
 	// schedule a spy on scroll events. Faster than adding scroll handlers.
 	setInterval(function() {
 		if(content_div.scrollTop() < about_div.height() - 100 && header_div.hasClass("transparent-bg") === false) {
 			header_div.addClass("transparent-bg").removeClass("primary-bg");
-			if($(window).width() > 1024) // check if desktop
-				countdown_div.fadeIn(800); // display countdown
+			countdown.show();
 		} else if(content_div.scrollTop() > about_div.height() - 100 && header_div.hasClass("primary-bg") === false) {
 			header_div.addClass("primary-bg").removeClass("transparent-bg");
-			if(countdown_div.is(':visible') === true)
-				countdown_div.fadeOut(800);
+			countdown.hide();
 		}
 
 		$(menu_items).each(function () {
@@ -104,9 +110,3 @@ $(function() {
 		$(this).find('.answer').toggleClass("is-visible");
 	});
 });
-
-function getCountdownEndTime() {
-	if($(window).width() > 1024)
-		return new Date("Nov 10, 2017 10:00:00").getTime();
-	return -1;
-}
