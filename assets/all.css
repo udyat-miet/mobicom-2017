@@ -51,6 +51,10 @@ ol, ul {
 	background: #EFEFEF;
 }
 
+.pink-bg {
+	background: rgb(255,64,129);
+}
+
 .parallax-bg {
 	background: url('img/background.jpeg') no-repeat fixed center;
 	background-size: cover;
@@ -217,7 +221,7 @@ header.transparent-bg {
 #countdown-timer > span.unit-placeholder {
 	font-size: 13px;
 	margin: 3px auto 15px;
-	border-bottom: 1px solid rgb(103,58,183); 
+	border-bottom: 1px solid rgb(103,58,183);
 }
 
 .page-content {
@@ -238,6 +242,7 @@ header.transparent-bg {
 	-webkit-transition: color 500ms ease-in-out;
 	transition: color 500ms ease-in-out;
 	cursor: default;
+	margin: 10px auto;
 }
 
 #why-participate .mdl-cell:hover {
@@ -269,6 +274,10 @@ header.transparent-bg {
 
 #timeline {
 	padding-top: 20px;
+}
+
+#timeline .mdl-cell {
+	margin: 10px auto;
 }
 
 #code-of-conduct .mdl-cell {
@@ -332,10 +341,6 @@ header.transparent-bg {
 	cursor: pointer;
 }
 
-.faq-container > .question:before {
-	content: "Q. ";
-}
-
 .faq-container > .answer {
 	display: none;
 	text-indent: 20px;
@@ -348,6 +353,11 @@ header.transparent-bg {
 .faq-container > .answer > ul {
 	margin: 0;
 	text-indent: 0;
+}
+
+#results li {
+	list-style-type: circle;
+	text-align: left;
 }
 
 footer.mdl-mini-footer {
