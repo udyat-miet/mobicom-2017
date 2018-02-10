@@ -23,7 +23,7 @@ var countdown = {
 									this.seconds = this.div.find("#seconds");
 								},
 	getEnd:				function() {
-									return new Date("Feb 10, 2018 10:00:00").getTime();
+									return new Date("March 17, 2018 10:00:00").getTime();
 								},
 	getRemaining: function() {
 									return this.getEnd() - new Date().getTime();
